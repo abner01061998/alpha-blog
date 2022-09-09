@@ -1,5 +1,6 @@
 <table>
     <thead>
+        <th>#</th>
         <th>Title</th>
         <th>Description</th>
         <th>Actions</th>
@@ -7,9 +8,10 @@
     <tbody>
         <% @articles.each do |article| %>
             <tr>
+                <td><%= article.id %></td>
                 <td><%= article.title %></td>
                 <td><%= article.description %></td>
-                <td><%= article.description %></td>
+                <td><%= "path_to" %></td>
             </tr>
         <% end %>
     </tbody>
