@@ -21,4 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  database: db/production.sqlite3
+  host: ec2-34-231-42-166.compute-1.amazonaws.com
+  database: d81tk35siogt35
+  user: lejywgjswokzro
+  port: 5432
+  password: e09b79e89eb17f2ea660a202d6bd4bfa071356391ddc0cb00176e57319f9953b
