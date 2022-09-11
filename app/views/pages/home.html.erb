@@ -1,5 +1,20 @@
-<h1>THIS IS THE HOME PAGE</h1>
 
-<%= link_to 'Articles listings', articles_path %>
-<%= link_to 'About Page', about_path %>
-<%= link_to 'Root', root_path %>
+<div id="page-content">
+    <div class="container" id="home-container">
+        <!-- Content here -->
+        <div class="container-fluid home-jumbo text-light p-5 text-center">
+            <div class="container p-5 text-white ">
+                <h1 class="display-4 bg-dark">Alpha Blog</h1>
+                <hr class="bg-dark">
+                <p class="bg-dark">Go to My Website</p>
+                <a href="#" class="btn btn-success">Sing up!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+        <small>Copyright &copy; <%= link_to "Abner del Cid", "https://abnerdc.rocks", class: "nav-link" %></small>
+    </div>
+</footer>
