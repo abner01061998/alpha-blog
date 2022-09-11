@@ -1,17 +1,29 @@
-<%= render "errors" %>
 
-<%= form_with model: @article, local: true, data: { turbo: false } do |f| %>
-  <p>
-      <%= f.label :title %><br/>
-      <%= f.text_field :title%>
-  </p>
-  <p>
-      <%= f.label :description %><br/>
-      <%= f.text_area :description %>
-  </p>
-  <p>
-      <%= f.submit %>
-  </p>
-<% end %>
 
-<%= link_to 'Index', articles_path %>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <%= render "errors" %>
+            <%= form_with model: @article,class:"shadow-sm p-3 bg-body rounded", local: true, data: { turbo: false } do |f| %>
+                <div class="form-group row">
+                    <%= f.label :title, class:"col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.text_field :title, class:"form-control shadow", placeholder:"Title for article" %>
+                    </div>
+                </div>
+                <div class="form-group row mt-3">
+                    <%= f.label :description, class:"col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.text_area :description, class:"form-control shadow", rows: 10, placeholder:"Description for article" %>
+                    </div>
+                </div>
+                <div class="form-group  text-center mt-3">
+                    <%= f.submit "Save", class: "btn btn-outline-primary" %>
+                </div>
+            <% end %>
+            <div class="form-group  text-center mb-3">
+                <%= link_to '[ Return ]', articles_path, class: "" %>
+            </div>
+        </div>
+    </div>
+</div>

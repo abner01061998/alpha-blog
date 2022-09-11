@@ -1,7 +1,16 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.description %></p>
-
-<%= link_to "Destroy", articles_path(@article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
-<%= link_to "Return", articles_path %>
-<%= link_to "Edit", edit_article_path(@article) %>
+<div class="container" id="show-article-container">
+    <h2 class="text-center"><%=@article.title%></h2>
+    <div class="card shadow mb-3 bg-body rounded justify-content-md-center">
+        <span class="card-header font-italic text-center">By Abner del Cid</span>
+        <div class="card-body">
+            <div class="card-text text-left">
+                <%= simple_format(@article.description) %>
+            </div>
+            <%= link_to 'Delete', @article, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class:"btn btn-outline-danger"  %>
+            <%= link_to 'Edit', edit_article_path(@article), class:"btn btn-outline-warning"  %>
+        </div>
+        <span class="card-footer font-italic text-center">
+        Created <%= time_ago_in_words @article.created_at %> ago, Updated <%= time_ago_in_words @article.updated_at %> ago
+        </span>
+    </div>
+</div>

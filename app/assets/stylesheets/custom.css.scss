@@ -34,3 +34,15 @@ body {
 #page-content {
   flex: 1 0 auto;
 }
+
+#articles-container>.card {
+    display: inline-flex !important;
+    max-width: 250px !important; 
+    max-height: 250px !important;
+    margin-top: 0px !important;
+}
+
+#articles-container>.card>.card-body{
+    min-height: 190px !important;
+    max-height: 190px !important;
+}
