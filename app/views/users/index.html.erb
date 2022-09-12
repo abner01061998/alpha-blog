@@ -14,8 +14,9 @@
                     <%= pluralize(user.articles.size, "article") %>
                 </div>
                 <%= link_to 'View Profile', user, class:"btn btn-outline-info"  %>
-                <%= link_to 'Delete', user, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class:"btn btn-outline-danger"  %>
-                <%= link_to 'Edit', edit_user_path(user), class:"btn btn-outline-warning"  %>
+                <% if logged_in? && user == current_user %>
+                    <%= link_to 'Edit', edit_user_path(user), class:"btn btn-outline-warning"  %>
+                <% end %>
                 
             </div>
             <span class="card-footer font-italic text-center">
