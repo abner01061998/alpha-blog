@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
     helper_method :current_user
     helper_method :logged_in?
     
@@ -9,5 +8,12 @@ class ApplicationController < ActionController::Base
 
     def logged_in?
         !!current_user
+    end
+
+    def require_user
+        if !logged_in?
+            flash[:alert] = "You mus be logged in to perform that action"
+            redirect_to login_path
+        end
     end
 end
