@@ -1,9 +1,8 @@
 
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-10">
-            <%= render "errors" %>
+            <%= render "shared/errors", object: @article  %>
             <%= form_with model: @article,class:"shadow-sm p-3 bg-body rounded", local: true, data: { turbo: false } do |f| %>
                 <div class="form-group row">
                     <%= f.label :title, class:"col-2 col-form-label" %>

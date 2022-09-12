@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about", to: "pages#about"
   resources :articles
-  get "articles_trash_can", to: "pages#about"
+  resources :users, except: [:new]
+  get "signup", to: "users#new"
+  #get "articles_trash_can", to: "pages#about"
+  
 end
