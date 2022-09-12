@@ -17,6 +17,7 @@ class User < ApplicationRecord
         self.email = email.downcase
     }
 
+    has_secure_password
 
     
 end
