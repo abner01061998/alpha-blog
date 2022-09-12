@@ -11,5 +11,12 @@ class User < ApplicationRecord
         length: { minimum: 5, maximum:100 }, 
         uniqueness: { case_sensitive: false },
         format: { with: EMAIL_REGEXP }
+
+    before_save {
+        self.username = username.downcase
+        self.email = email.downcase
+    }
+
+
     
 end
