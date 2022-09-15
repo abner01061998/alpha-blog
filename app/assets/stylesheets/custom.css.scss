@@ -37,14 +37,15 @@ body {
 
 #articles-container>.card {
     display: inline-flex !important;
-    max-width: 250px !important;
-    max-height: 250px !important;
+    min-width: 350px !important;
+    max-width: 350px !important;
+    max-height: 350px !important;
     margin-top: 0px !important;
 }
 
 #articles-container>.card>.card-body {
-    min-height: 190px !important;
-    max-height: 190px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
 }
 
 
