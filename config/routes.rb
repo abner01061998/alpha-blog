@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   post "login", to: 'sessions#create'
   delete "logout", to: 'sessions#destroy'
   #get "articles_trash_can", to: "pages#about"
+  resources :categories, except: [:destroy]
   
 end
