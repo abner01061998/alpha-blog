@@ -21,6 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
+  adapter: postgresql
   host: ec2-34-231-42-166.compute-1.amazonaws.com
   database: d81tk35siogt35
   user: lejywgjswokzro
